@@ -2,7 +2,8 @@ import React from 'react';
 
 import './ColorSpotter.css';
 
-export const ColorSpotter = ({colorItems}) => {
+export const ColorSpotter = ({colorItems, colorItemWidth}) => {
+  console.log(colorItems);
   return (
     <div className="color-spotter">
       {
@@ -10,7 +11,10 @@ export const ColorSpotter = ({colorItems}) => {
           (colorItem, index) =>
             <div
               className="color-spotter__item"
-              style={{backgroundColor: `hsl(${colorItem.hue}, ${colorItem.saturation}%, ${colorItem.lightness}%)`}}
+              style={{
+                backgroundColor: colorItem.color,
+                width: colorItemWidth
+              }}
               key={index}
             >
             </div>
