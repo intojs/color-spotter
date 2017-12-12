@@ -16,7 +16,7 @@ export const ColorSpotter = ({level, colorItems, colorItemWidth, clickColorItem}
                 width: colorItemWidth
               }}
               key={index}
-              onClick={clickColorItem(colorItem)}
+              onClick={clickColorItem.bind(null, colorItem)}
             >
             </div>
         )

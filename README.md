@@ -1,5 +1,6 @@
 ### Running the app
 npm i
+
 npm start
 
 ## Coding style
