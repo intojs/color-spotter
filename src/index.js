@@ -1,3 +1,5 @@
+import 'bootstrap/dist/css/bootstrap-reboot.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 
 import React from 'react';
@@ -8,8 +10,6 @@ import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
 import {store} from "./store/store";
-
-console.log(process.env.NODE_ENV);
 
 ReactDOM.render(
   <Provider store={store}>

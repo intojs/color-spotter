@@ -1,9 +1,8 @@
-import React from 'react';
-
 import './ColorSpotter.css';
 
-export const ColorSpotter = ({colorItems, colorItemWidth}) => {
-  console.log(colorItems);
+import React from 'react';
+
+export const ColorSpotter = ({colorItems, colorItemWidth, clickColorItem}) => {
   return (
     <div className="color-spotter">
       {
@@ -16,6 +15,7 @@ export const ColorSpotter = ({colorItems, colorItemWidth}) => {
                 width: colorItemWidth
               }}
               key={index}
+              onClick={clickColorItem.bind(null, colorItem)}
             >
             </div>
         )
