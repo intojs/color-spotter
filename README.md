@@ -1,3 +1,6 @@
+### Demo URL
+https://intojs.github.io/color-spotter/
+
 ### Running the app
 npm i
 
