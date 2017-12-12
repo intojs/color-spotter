@@ -1,13 +1,16 @@
 {
   "name": "color-spotter",
+  "homepage": "https://intojs.github.io/color-spotter",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "sw": "npm shrinkwrap --dev"
+    "sw": "npm shrinkwrap --dev",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "bootstrap": "4.0.0-beta.2",
@@ -20,6 +23,7 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
+    "gh-pages": "^1.1.0",
     "redux-devtools-extension": "2.13.2"
   }
 }
