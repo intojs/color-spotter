@@ -1,11 +1,14 @@
 import {store} from '../store';
 import {
   getColorSpotterStateWithDependencies,
+  getLevelFromState,
   INITIAL_LEVEL,
-  INITIAL_NR_OF_COLOR_ITEMS_PER_ROW, MAX_LEVEL
+  INITIAL_NR_OF_COLOR_ITEMS_PER_ROW,
+  isMaxLevelReached,
+  MAX_LEVEL
 } from "./color-spotter.utils";
 
-import {lostGame, wonGame} from "../game-status/game-status.actions";
+import {looseGame, winGame} from "../game-status/game-status.actions";
 
 export const GET_INITIAL_LEVEL = 'GET_INITIAL_LEVEL';
 export const INCREASE_LEVEL = 'INCREASE_LEVEL';
@@ -32,15 +35,15 @@ export const increaseLevel = () => {
   }
 };
 
-export const clickColorItem = (colorItem) => (dispatch) => {
+export const clickColorItemThunk = (colorItem) => (dispatch) => {
   if (colorItem.pickColor) {
-    if (store.getState().colorSpotter.level < MAX_LEVEL) {
+    if (isMaxLevelReached(getLevelFromState(store.getState()))(MAX_LEVEL)) {
       dispatch(increaseLevel());
     } else {
-      dispatch(wonGame())
+      dispatch(winGame())
     }
   } else {
-    dispatch(lostGame())
+    dispatch(looseGame())
   }
 };
 

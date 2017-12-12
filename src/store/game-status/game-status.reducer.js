@@ -1,4 +1,4 @@
-import {LOST_GAME, START_GAME, WON_GAME} from "./game-status.actions";
+import {LOOSE_GAME, START_GAME, WIN_GAME} from "./game-status.actions";
 
 const initialState = {
   hasStarted: false,
@@ -14,13 +14,13 @@ export const gameStatusReducer = (state = initialState, action) => {
         isWon: false,
         isLost: false
       };
-    case WON_GAME:
+    case WIN_GAME:
       return {
         hasStarted: false,
         isWon: true,
         isLost: false
       };
-    case LOST_GAME:
+    case LOOSE_GAME:
       return {
         hasStarted: false,
         isWon: false,

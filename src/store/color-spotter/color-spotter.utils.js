@@ -55,6 +55,10 @@ export const getColorItemsWithPickColor = (colorItems) => (pickColor, pickColorP
       colorItem
   );
 
+export const getLevelFromState = (state) => state.colorSpotter.level;
+
+export const isMaxLevelReached = (level) => (maxLevel) => level < maxLevel;
+
 const getColorSpotterState = (dependencies) => (initialState) => {
   const {
     getHue,

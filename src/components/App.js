@@ -5,8 +5,8 @@ import {ColorSpotter} from "./ColorSpotter";
 import {StartGameForm} from "./StartGameForm";
 import {WonGame} from "./WonGame";
 import {LostGame} from "./LostGame";
-import {startGame} from "../store/game-status/game-status.actions";
-import {clickColorItem} from "../store/color-spotter/color-spotter.actions";
+import {startGameThunk} from "../store/game-status/game-status.actions";
+import {clickColorItemThunk} from "../store/color-spotter/color-spotter.actions";
 
 class App extends Component {
   onClickColorItem(colorItem) {
@@ -55,8 +55,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    startGame: () => dispatch(startGame()),
-    clickColorItem: (colorItem) => dispatch(clickColorItem(colorItem))
+    startGame: () => dispatch(startGameThunk()),
+    clickColorItem: (colorItem) => dispatch(clickColorItemThunk(colorItem))
   }
 };
 
