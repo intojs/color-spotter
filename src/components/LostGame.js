@@ -9,7 +9,7 @@ export const LostGame = ({startGame}) => {
       <div className="mt-4">
         <button
           type="button"
-          className="btn btn-primary"
+          className="btn btn-danger"
           onClick={startGame}
         >
           Play again?

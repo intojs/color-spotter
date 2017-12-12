@@ -10,7 +10,25 @@
   flex-wrap: wrap;
 }
 
+.color-spotter__level {
+  position: fixed;
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  top: -30px;
+  left: -30px;
+  background: #C82333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  font-size: 30px;
+}
+
 .color-spotter__item {
+
   width: 25%;
   border: 1px solid #CCC;
   box-sizing: border-box;

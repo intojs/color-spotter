@@ -2,9 +2,10 @@ import './ColorSpotter.css';
 
 import React from 'react';
 
-export const ColorSpotter = ({colorItems, colorItemWidth, clickColorItem}) => {
+export const ColorSpotter = ({level, colorItems, colorItemWidth, clickColorItem}) => {
   return (
     <div className="color-spotter">
+      <div className="color-spotter__level">{level}</div>
       {
         colorItems.map(
           (colorItem, index) =>
@@ -15,7 +16,7 @@ export const ColorSpotter = ({colorItems, colorItemWidth, clickColorItem}) => {
                 width: colorItemWidth
               }}
               key={index}
-              onClick={clickColorItem.bind(null, colorItem)}
+              onClick={clickColorItem(colorItem)}
             >
             </div>
         )
