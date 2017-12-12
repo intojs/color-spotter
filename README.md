@@ -15,7 +15,7 @@ I rely allot on closures, higher order functions, and currying.
 
 Also, dependency injection is done with functions.
 
-The application favors composition rather then inheritance, a perfect showcase being the **color-spotter functional factory**.
+The application favors composition rather than inheritance, a perfect showcase being the **color-spotter functional factory**.
 
 ## CSS Style
 I use the **BEM methodology**, it's a clean way to encapsulate and organize your code.
@@ -23,12 +23,12 @@ I use the **BEM methodology**, it's a clean way to encapsulate and organize your
 ## Technologies
 
 ### Create React App
-I have decided to use Create React App, because it's an out of the box way to build React applications.
+I have decided to use Create React App because it's an out of the box way to build React applications.
 
 CRA is amazing and supported by Facebook.
 
 ### Redux
-The application uses an external state management system called Redux and some of it's libraries like React Thunks.
+The application uses an external state management system called Redux and some of its libraries like React Thunks.
 
 Keeping the state separate allows me to use only functional components.
 
@@ -45,4 +45,4 @@ Also, I could have used the curry method allot, but I wanted to showcase curry-i
 
 ### Testing
 
-Testing is easy due the FP principles used all around the app.
+Testing is easy due to the FP principles used all around the app.
